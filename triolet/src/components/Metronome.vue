@@ -19,7 +19,7 @@ export default {
             noeudGain.connect(contexteAudio.destination)
 
             this.oscillateur.type = 'sine' // onde sinusoïdale — les autres valeurs possible sont : 'square', 'sawtooth', 'triangle' et 'custom'
-            this.oscillateur.frequency.value = 500 // valeur en hertz
+            this.oscillateur.frequency.value = 330 // valeur en hertz
             this.oscillateur.start()
         },
         stopSound () {
