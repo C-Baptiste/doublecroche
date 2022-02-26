@@ -13,10 +13,11 @@ export default {
             var contexteAudio = new (window.AudioContext || window.webkitAudioContext)()
 
             this.oscillateur = contexteAudio.createOscillator()
-            var noeudGain = contexteAudio.createGain()
+            //var noeudGain = contexteAudio.createGain()
 
-            this.oscillateur.connect(noeudGain)
-            noeudGain.connect(contexteAudio.destination)
+            this.oscillateur.connect(contexteAudio.destination)
+            //this.oscillateur.connect(noeudGain)
+            //noeudGain.connect(contexteAudio.destination)
 
             this.oscillateur.type = 'sine' // onde sinusoïdale — les autres valeurs possible sont : 'square', 'sawtooth', 'triangle' et 'custom'
             this.oscillateur.frequency.value = 330 // valeur en hertz
