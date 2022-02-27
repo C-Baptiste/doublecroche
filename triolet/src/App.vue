@@ -1,6 +1,6 @@
 <script setup>
 import Metronome from "./components/Metronome.vue"
-import Exercice from "./components/Exercice.vue";
+import Exercice from "./components/Exercice.vue"
 </script>
 
 <template>  
