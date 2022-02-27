@@ -4,12 +4,21 @@ import Exercice from "./components/Exercice.vue"
 </script>
 
 <template>  
-<main>
-  <div class="flex flex-row">
-    <div class="m-8">
+<main class="">
+  <div class="flex
+              justify-end
+              ">
+    <div class="m-10">exercices</div>
+    <div class="m-10">login</div>
+    <div class="m-10">logout</div>
+  </div>
+  <div class="flex 
+              justify-center
+              ">
+    <div class="m-10">
       <Exercice/>
     </div>
-    <div class="m-8">
+    <div class="m-10">
       <Metronome/>
     </div>
   </div>

@@ -73,8 +73,8 @@ export default {
         w-36 
         h-96
         ">        
-        <ul>
-            <li v-for="timeButton in timeButtons">
+        <ul class="pt-3">
+            <li v-for="timeButton in timeButtons" >
                 <button @click="setup(timeButton.text)"
                     class="w-36
                             text-gray-100
@@ -85,8 +85,18 @@ export default {
             </li>
         </ul>
     </div>
-    <div @click="stopSound"
-        class="bg-slate-200">
-        stop
+    <div class="flex
+                justify-center">
+        <div @click="stopSound"
+        class="bg-gradient-to-b from-orange-200 to-orange-50
+                h-16
+                w-16
+                text-center                
+                rounded-full">
+            <button class="pt-3
+                        ">
+                       <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 8v8H8V8h8m2-2H6v12h12V6z"/></svg> 
+            </button>
+        </div>
     </div>
 </template>

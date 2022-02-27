@@ -10,7 +10,7 @@ export default {
     },
     methods: {
         setColor () {
-            this.BgColor.backgroundColor = "#a7f3d0"
+            this.BgColor.background = "linear-gradient(#5F00BA, #A09BE7)"
         },
         startCountdown () {
             this.Countdown = "5'"
