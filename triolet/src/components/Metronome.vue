@@ -68,14 +68,18 @@ export default {
 
 <template>
     <div 
-        class="bg-gradient-to-b from-rose-900 to-rose-50
+        class="bg-gradient-to-b from-red-400 to-orange-200
+        rounded-full
         w-36 
         h-96
-        rounded
         ">        
         <ul>
             <li v-for="timeButton in timeButtons">
-                <button @click="setup(timeButton.text)">
+                <button @click="setup(timeButton.text)"
+                    class="w-36
+                            text-gray-100
+                            hover:font-bold
+                            ">
                     {{timeButton.text}}
                 </button>
             </li>
