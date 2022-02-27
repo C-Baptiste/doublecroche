@@ -1,4 +1,5 @@
 <script>
+let ac = null
 export default {
     data() {
         return {
@@ -35,14 +36,14 @@ export default {
       },
       setup(timeText) {
         this.tempo = timeText
-        var ac = new AudioContext()
+        if (ac !== null) {ac.close()}
+        ac = new AudioContext()
         var buf = ac.createBuffer(1, ac.sampleRate * 2, ac.sampleRate)
         var channel = buf.getChannelData(0)
         var phase = 0
         var amp = 1
         var duration_frames = ac.sampleRate / 50
         const f = 330
-
         for (var i = 0; i < duration_frames; i++) {
             channel[i] = Math.sin(phase) * amp
             phase += 2 * Math.PI * f / ac.sampleRate
@@ -51,13 +52,12 @@ export default {
             }
             amp -= 1 / duration_frames
           }
-        
         this.source = ac.createBufferSource()
         this.source.buffer = buf
         this.source.loop = true
         this.source.loopEnd = 1 / (this.getTempo() / 60)
         this.source.connect(ac.destination)
-        this.source.start(0)
+        this.source.start()
       },
         stopSound () {
             this.source.stop()
@@ -74,8 +74,10 @@ export default {
         rounded
         ">        
         <ul>
-            <li @click="setup(timeButton.text)" v-for="timeButton in timeButtons">
-                {{timeButton.text}}
+            <li v-for="timeButton in timeButtons">
+                <button @click="setup(timeButton.text)">
+                    {{timeButton.text}}
+                </button>
             </li>
         </ul>
     </div>
