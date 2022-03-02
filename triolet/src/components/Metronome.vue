@@ -80,6 +80,8 @@ export default {
                     class="w-36
                             text-gray-100
                             hover:font-bold
+                            number_font
+                            text-sm
                             ">
                     {{timeButton.text}}
                 </button>
@@ -102,3 +104,9 @@ export default {
         </div>
     </div>
 </template>
+
+<style>
+.number_font{
+    font-family: 'Architects Daughter', cursive;
+}
+</style>

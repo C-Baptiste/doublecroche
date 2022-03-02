@@ -34,7 +34,8 @@ export default {
                     bg-slate-50
                     pt-6
                     border-r-2
-                    basis-3/4">
+                    basis-3/4
+                    exercice_font">
             {{ exercice.text }}
         </div>
         <div class="basis-1/4">
@@ -45,3 +46,10 @@ export default {
 <input v-model="newExercice" @keyup.enter="addExercice">
 <button @click="addExercice">+</button>
 </template>
+
+<style>
+.exercice_font{
+    font-family: 'Architects Daughter', cursive;
+    color: #412722;
+}
+</style>
