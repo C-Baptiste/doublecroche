@@ -72,6 +72,7 @@ export default {
         rounded-full
         w-36 
         h-96
+        shadow-md
         ">        
         <ul class="pt-3">
             <li v-for="timeButton in timeButtons" >
@@ -92,7 +93,8 @@ export default {
                 h-16
                 w-16
                 text-center                
-                rounded-full">
+                rounded-full
+                shadow-inner">
             <button class="pt-3
                         ">
                        <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 8v8H8V8h8m2-2H6v12h12V6z"/></svg> 
