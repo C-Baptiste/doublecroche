@@ -38,8 +38,7 @@ export default {
             {{ exercice.text }}
         </div>
         <div class="basis-1/4">
-            <Timer class="pt-6
-                        text-center"/>
+            <Timer/>
         </div>
     </li>
 </ul>
