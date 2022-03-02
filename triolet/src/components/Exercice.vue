@@ -31,6 +31,7 @@ export default {
             h-24
             flex flex-row">
         <div class="text-center
+                    rounded-full
                     bg-slate-50
                     pt-6
                     border-r-2

@@ -39,10 +39,17 @@ export default {
                 rounded-full
                 shadow-inner
                 border-b-2">
-    <div class="pt-10
-                pl-10">
+    <div class="pt-9
+                pl-10
+                timer_font">
         {{ Countdown }}
     </div>
 </div>
-
 </template>
+
+<style>
+.timer_font{
+    font-family: 'Architects Daughter', cursive;
+    color: #412722;
+}
+</style>
