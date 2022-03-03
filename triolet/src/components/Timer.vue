@@ -14,12 +14,12 @@ export default {
     },
     methods: {
         setColor () {
-            this.BgColor.background = "linear-gradient(#4E878C, #65B891)"
+            this.BgColor.background = "linear-gradient(#736CED, #6C8EAD)"
         },
         startCountdown () {
             this.Player_Visibility.display = "none"
             this.BgColor.display = ""
-            this.Countdown = "5'"
+            this.Countdown = ""
             setInterval(this.setColor, 3000)
         }
     }
@@ -36,12 +36,16 @@ export default {
 <div  v-bind:style="BgColor"
         class="h-24 
                 w-24
-                rounded-full
-                shadow-inner
+                rounded-full                
                 border-b-2">
     <div class="pt-9
                 pl-10
-                timer_font">
+                timer_font
+                text-slate-800
+                bg-white
+                h-16
+                w-16
+                rounded-full">
         {{ Countdown }}
     </div>
 </div>
@@ -50,6 +54,5 @@ export default {
 <style>
 .timer_font{
     font-family: 'Architects Daughter', cursive;
-    color: #412722;
 }
 </style>

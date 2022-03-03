@@ -74,7 +74,7 @@ export default {
         h-96
         shadow-md
         ">        
-        <ul class="pt-3">
+        <ul class="pt-2">
             <li v-for="timeButton in timeButtons" >
                 <button @click="setup(timeButton.text)"
                     class="w-36
