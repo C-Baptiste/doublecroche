@@ -20,7 +20,7 @@ export default {
             this.Player_Visibility.display = "none"
             this.BgColor.display = ""
             this.Countdown = ""
-            setInterval(this.setColor, 3000)
+            setInterval(this.setColor, 300000)
         }
     }
 }
