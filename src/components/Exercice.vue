@@ -5,17 +5,21 @@ export default {
     data() {
         return {
             newExercice: "",
-            exercices: [
-                { id: id++, text: "accent double croche" },
-                { id: id++, text: "bend gamme majeure" },
-                { id: id++, text: "sultans of swing" }
-            ]
+            exercices: []
         };
     },
     methods: {
         addExercice() {
             this.exercices.push({ id: id++, text: this.newExercice })
+            localStorage[id] = this.newExercice
             this.newExercice = ""
+        }
+    },
+    mounted() {
+        if (localStorage) {
+            for (const [key, value] of Object.entries(localStorage)) {
+                this.exercices.push({ id: parseInt(key), text: value })    
+            }
         }
     },
     components: { Timer }
