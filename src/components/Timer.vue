@@ -9,7 +9,8 @@ export default {
             },
             Player_Visibility: {
                 display: ""
-            }
+            },
+            countdownInterval: ""
         }
     },
     methods: {
@@ -19,8 +20,17 @@ export default {
         startCountdown () {
             this.Player_Visibility.display = "none"
             this.BgColor.display = ""
-            this.Countdown = ""
+            this.Countdown = "300"
             setInterval(this.setColor, 300000)
+            this.countdownInterval = setInterval(this.countdownStep, 1000)
+        },
+        countdownStep () {
+            if (this.Countdown == "1") {
+                this.Countdown = ""
+                clearInterval(this.countdownInterval)
+            } else {
+                this.Countdown -= "1"
+            }
         }
     }
 }

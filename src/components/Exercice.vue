@@ -37,7 +37,7 @@ export default {
         <div class="text-center
                     rounded-full
                     bg-slate-100
-                    pt-6
+                    pt-9
                     border-r-2
                     basis-3/4
                     exercice_font">
@@ -56,7 +56,7 @@ export default {
     <div class="text-center
                     rounded-full
                     bg-slate-100
-                    pt-6
+                    pt-9
                     border-r-2
                     basis-3/4
                     exercice_font
