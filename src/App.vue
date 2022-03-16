@@ -15,12 +15,22 @@ import Exercice from "./components/Exercice.vue"
             ">
     <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="900" height="600" fill="#FFFFFF"></rect><g transform="translate(934.4716498235847 566.6262025166385)"><path d="M149.3 -151.4C187.8 -110.8 209.4 -55.4 216.3 7C223.3 69.3 215.6 138.6 177.1 193.1C138.6 247.6 69.3 287.3 13.8 273.5C-41.7 259.7 -83.4 192.4 -145.9 137.9C-208.4 83.4 -291.7 41.7 -287.4 4.3C-283.1 -33.1 -191.3 -66.3 -128.8 -107C-66.3 -147.6 -33.1 -195.8 11.1 -206.9C55.4 -218.1 110.8 -192.1 149.3 -151.4" fill="#f1f5f9"></path></g></svg>
   </div>
-  <div class="flex
+  <div class="flex justify-between">
+    <div class="m-10
+                title_font
+                text-4xl
+                ">
+      Guitar Root'In
+    </div>
+    <div class="flex
               justify-end
-              ">
-    <div class="m-10">Exercices</div>
-    <div class="m-10">Guitar Roadmap</div>
-    <div class="m-10">Login</div>
+              title_font
+              text-2xl
+              ">    
+      <div class="m-10">Exercices</div>
+      <div class="m-10">Guitar Roadmap</div>
+      <div class="m-10">Login</div>
+    </div>
   </div>
   <div class="flex 
               justify-center
@@ -34,3 +44,12 @@ import Exercice from "./components/Exercice.vue"
   </div>
 </main>
 </template>
+
+<style>
+.title_font{
+  font-family: 'Reenie Beanie', cursive;
+}
+.menu_font{
+    font-family: 'Architects Daughter', cursive;
+}
+</style>
